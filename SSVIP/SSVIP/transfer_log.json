@@ -1,0 +1,22 @@
+{
+	"jp08.ssvipv5.com" : {
+		"totalUploadBytes" : 902901,
+		"totalDownloadBytes" : 315628082
+	},
+	"us03.ssvipv5.com" : {
+		"totalUploadBytes" : 32069,
+		"totalDownloadBytes" : 390605503
+	},
+	"us01.ssvipv5.com" : {
+		"totalUploadBytes" : 5355232,
+		"totalDownloadBytes" : 243368090
+	},
+	"sgp01.ssvipv5.com" : {
+		"totalUploadBytes" : 533720,
+		"totalDownloadBytes" : 2803600
+	},
+	"jp01.ssvipv5.com" : {
+		"totalUploadBytes" : 1463032220,
+		"totalDownloadBytes" : 1391272668
+	}
+}

@@ -1,0 +1,89 @@
+[2016-10-24 21:13:03] ShadowsocksR started
+[2016-10-25 00:17:09] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 00:24:35] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 00:26:01] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 02:15:29] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 02:26:40] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 02:26:41] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 02:26:44] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 02:26:46] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 02:26:50] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:23] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.BeginReceive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, AsyncCallback callback, Object state)
+   在 Shadowsocks.Controller.Listener.AcceptCallback(IAsyncResult ar)
+[2016-10-25 19:14:23] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.BeginSend(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, AsyncCallback callback, Object state)
+   在 Shadowsocks.Controller.PACServer.SendResponse(Byte[] firstPacket, Int32 length, Socket socket, Int32 socksType, String setProxy)
+[2016-10-25 19:14:23] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndAccept(Byte[]& buffer, Int32& bytesTransferred, IAsyncResult asyncResult)
+   在 System.Net.Sockets.Socket.EndAccept(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.AcceptCallback(IAsyncResult ar)
+[2016-10-25 19:14:23] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndAccept(Byte[]& buffer, Int32& bytesTransferred, IAsyncResult asyncResult)
+   在 System.Net.Sockets.Socket.EndAccept(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.AcceptCallback(IAsyncResult ar)
+[2016-10-25 19:14:25] [Warn]Proxy server [[日本1]:推荐用于看视频，网页，游戏|使用P2P下载者封号(jp01.ssvipv5.com)] Host not found
+[2016-10-25 19:14:25] [Warn]Proxy server [[日本1]:推荐用于看视频，网页，游戏|使用P2P下载者封号(jp01.ssvipv5.com)] Host not found
+[2016-10-25 19:14:25] [Warn]Proxy server [[日本1]:推荐用于看视频，网页，游戏|使用P2P下载者封号(jp01.ssvipv5.com)] Host not found
+[2016-10-25 19:14:25] [Warn]Proxy server [[日本1]:推荐用于看视频，网页，游戏|使用P2P下载者封号(jp01.ssvipv5.com)] Host not found
+[2016-10-25 19:14:25] [Warn]Proxy server [[日本1]:推荐用于看视频，网页，游戏|使用P2P下载者封号(jp01.ssvipv5.com)] Host not found
+[2016-10-25 19:14:30] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:32] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:32] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:32] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:32] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:32] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:14:49] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 19:15:00] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-25 22:07:24] ShadowsocksR started
+[2016-10-26 19:01:20] ShadowsocksR started
+[2016-10-26 19:04:16] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-26 19:08:55] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-26 19:08:55] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-26 19:09:21] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-26 19:09:21] System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   在 Shadowsocks.Controller.Listener.ReceiveCallback(IAsyncResult ar)
+[2016-10-26 19:37:31] ShadowsocksR started
