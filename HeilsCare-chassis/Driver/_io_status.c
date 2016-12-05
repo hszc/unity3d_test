@@ -1,3 +1,15 @@
+/**********************************************************************
+ *	@file: _io_status.c
+ *  @description: 普通IO口中断、输出、输入配置
+ *   
+ *  @create: 2016-8-2
+ *  @author: flysnow
+ *  @explain: 利用结构里只需要填写io_structs[]参数列表就能配置
+ *   
+ *  @modification: 2016-12-1
+ *  @author: flysnow
+ *  @explain: 修改注释
+ *********************************************************************/  
 #include "stm32f10x.h"
 #include "stm32f10x_conf.h"
 #include "../System/_typedef.h"
@@ -17,6 +29,9 @@ sIO_t io_structs[] =
 			{OUTPUT,		PD,			 13,				0xFF,					0xFF,		  	0xFF,					0xFF		  },
 			{OUTPUT,		PD,			 14,				0xFF,					0xFF,		  	0xFF,					0xFF			},
 			{OUTPUT,		PD,			 15,				0xFF,					0xFF,		  	0xFF,					0xFF			},
+
+			{OUTPUT,		PA,			 2,				0xFF,					0xFF,		  	0xFF,					0xFF			},
+			{OUTPUT,		PA,			 3,				0xFF,					0xFF,		  	0xFF,					0xFF			},
 //防撞条IO触发配置信息
 
 // 		{INPUT,			PB,			 4,					0x0C,					EXTI4_IRQn,		  			4,					1			},

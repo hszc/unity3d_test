@@ -1,16 +1,18 @@
-/**
-  ******************************************************************************
-  * @file    _ultrasonic.c
-  * @author  flysnow
-  * @version V1.0
-  * @date    2016-8-2
-  * @brief   
-  ******************************************************************************
-  * @attention
-  *
-  ******************************************************************************
-  */
-	
+
+/**********************************************************************
+ *	@file: _ultrasonic.c
+ *  @description: 超声波测距
+ *   
+ *  @create: 2016-8-2
+ *  @author: flysnow
+ *  @explain: 4组超声波
+ *   
+ *  @modification: 2016-12-1
+ *  @author: flysnow
+ *  @explain: 修改注释
+ *********************************************************************/  
+ 
+ 
 #include "stm32f10x.h"
 #include "stm32f10x_tim.h"
 #include "../Driver/_io_status.h"
@@ -106,12 +108,24 @@ struct Ultrasonic Ultrasonic[] =
 
 unsigned char ultrasonic_num = sizeof(Ultrasonic)/sizeof(Ultrasonic[0]);
 
+/************************************************************************
+ * 	@function:ClcUtralData
+ * 	@description:超声波测距中可能出现噪声，修正的阿尔法滤波器有效的降噪
+ *  @param: parg通道编号
+ *  @return:
+ ************************************************************************/ 
 static void ClcUtralData(unsigned char parg)
 {
 	Ultrasonic[parg].distance = 0.0f;
 	Ultrasonic[parg].trig_time = 0;
 }
 
+/************************************************************************
+ * 	@function:UtralMea
+ * 	@description:超声波测量前需要向超声波模块发送脉冲
+ *  @param: parg通道编号
+ *  @return:
+ ************************************************************************/
 static void UtralMea(unsigned char parg)
 {
 	Ultrasonic[parg].GPIO_OUT -> BSRR = Ultrasonic[parg].Pin_Out;
@@ -120,12 +134,17 @@ static void UtralMea(unsigned char parg)
 	Ultrasonic[parg].IsStart = 1;
 }
 
-int l_cnt = 0;
-float distanceDataIn[4][TOTAL] = {0};
-float distanceDataTmp[4][TOTAL] = {0};
-int m_cnt = 0;
-float distanceSum = 0;
-
+/************************************************************************
+ * 	@function:Ultrafilter
+ * 	@description:超声波测距中可能出现噪声，修正的阿尔法滤波器有效的降噪
+ *  @param: parg通道编号
+ *  @return:
+ ************************************************************************/ 
+static int l_cnt = 0;
+static float distanceDataIn[4][TOTAL] = {0};
+static float distanceDataTmp[4][TOTAL] = {0};
+static int m_cnt = 0;
+static float distanceSum = 0;
 static void Ultrafilter(unsigned char parg)
 {
 		//滑动窗口卷积
@@ -151,6 +170,13 @@ static void Ultrafilter(unsigned char parg)
 
 }
 
+
+/************************************************************************
+ * 	@function:bubble_sort
+ * 	@description:冒泡排序
+ *  @param: a--数组，n--数组元素个数
+ *  @return:
+ ************************************************************************/ 
 void bubble_sort(float a[], u8 n)
 {
 	u8 i,j;

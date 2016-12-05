@@ -442,6 +442,16 @@
               <FileType>1</FileType>
               <FilePath>..\Algorithm\_serial.c</FilePath>
             </File>
+            <File>
+              <FileName>_gps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\_gps.c</FilePath>
+            </File>
+            <File>
+              <FileName>_diff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\_diff.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -526,6 +536,11 @@
               <FileName>_ultrasonic.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\_ultrasonic.c</FilePath>
+            </File>
+            <File>
+              <FileName>_encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\_encoder.c</FilePath>
             </File>
           </Files>
         </Group>

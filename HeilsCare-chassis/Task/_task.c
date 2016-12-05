@@ -1,15 +1,16 @@
-/**
-  ******************************************************************************
-  * @file    __task.c
-  * @author  flysnow
-  * @version V1.0
-  * @date    2016-8-7
-  * @brief   This file contains all the configuration of pwm
-  ******************************************************************************
-  * @attention
-  *
-  ******************************************************************************
-  */
+/**********************************************************************
+ *	@file: __task.c
+ *  @description: 任务入口函数
+ *   
+ *  @create: 2016-8-2
+ *  @author: flysnow
+ *  @explain: main分为几个任务
+ *   
+ *  @modification: 2016-12-1
+ *  @author: flysnow
+ *  @explain: 修改注释
+ *********************************************************************/  
+ 
 #include "includes.h"
 #include "../System/sys.h" 	
 #include "../Driver/_delay.h"	
@@ -85,6 +86,8 @@ u8 testflag3 = 0;
 	u8 PS2_key;
 char SdTPC[64] = {0};
 extern PC_Data PcData;
+void setDiffSpeed(float speedTrans, float speedRot);
+
 void ManualTask(void *para)
 {	 	
 	Ultrasonic[0].ClcUtralData(0);
@@ -100,10 +103,11 @@ void ManualTask(void *para)
     sprintf(SdTPC, "(%d,%d,%d,%d,1)\n\t", (int)GPS.position.x, (int)GPS.position.y, (int)GPS.radian, 100);
     Com_Puts(1, SdTPC);
     SdTPC[0] = 0;
-//		Speed_X = (Data[5] - 0x80)* 20;
-//		Speed_Y = (0x80 - Data[6])* 20;
-//		SetSpeed(1000,Speed_Y,Speed_Rotation);
- 		SetSpeed(PcData.speed_x.fl32*10,PcData.speed_y.fl32*10,PcData.speed_rot.fl32*10);
+		Speed_X = (Data[5] - 0x80)* 20;
+		Speed_Y = (0x80 - Data[6])* 20;
+//		SetSpeed(100,100,100);
+ 		//SetSpeed(PcData.speed_x.fl32*10,PcData.speed_y.fl32*10,PcData.speed_rot.fl32*10);
+		setDiffSpeed(500,300);
  		Ultrasonic[0].UtralMea(0);
 		Ultrasonic[0].Ultrafilter(0);
  		Ultrasonic[1].UtralMea(1);
