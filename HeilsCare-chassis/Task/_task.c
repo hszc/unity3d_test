@@ -100,7 +100,11 @@ void ManualTask(void *para)
 // 		USART_SendData(USART2, 0x55);
 // 		USART_SendData(USART3, 0x55);
   	PS2_key=PS2_DataKey();
-    sprintf(SdTPC, "(%d,%d,%d,%d,1)\n\t", (int)GPS.position.x, (int)GPS.position.y, (int)GPS.radian, 100);
+//		sprintf(SdTPC, "(%d,%d,%d,%d,1)\n\t", (int)10, (int)11, (int)12, 100);
+		GPS.position.x += 1;
+		GPS.position.y += 1;
+		GPS.radian += 1;
+   sprintf(SdTPC, "(%d,%d,%d,%d,1)\n", (int)GPS.position.x, (int)GPS.position.y, (int)GPS.radian, 100);
     Com_Puts(1, SdTPC);
     SdTPC[0] = 0;
 		Speed_Rotation = (Data[5] - 0x80)* 20;
@@ -114,9 +118,19 @@ void ManualTask(void *para)
 		LCD_WriteString("Speed_Rotation:");		
 		LCD_WriteFloat(Speed_Rotation);
 		
+		SetCursor(0,40);
+		LCD_WriteString("speedx:");		
+		LCD_WriteFloat(PcData.speed_x.fl32);
+		SetCursor(0,60);
+		LCD_WriteString("speedy:");		
+		LCD_WriteFloat(PcData.speed_y.fl32);
+		SetCursor(0,80);
+		LCD_WriteString("speedz:");		
+		LCD_WriteFloat(PcData.speed_rot.fl32);
+		
 		setDiffSpeed(Speed_Y,Speed_Rotation);
- 		Ultrasonic[0].UtralMea(0);
-		Ultrasonic[0].Ultrafilter(0);
+//  		Ultrasonic[0].UtralMea(0);
+// 		Ultrasonic[0].Ultrafilter(0);
 //  		Ultrasonic[1].UtralMea(1);
 // 		Ultrasonic[1].Ultrafilter(1);
 //  		Ultrasonic[2].UtralMea(2);

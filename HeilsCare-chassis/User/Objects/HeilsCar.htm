@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\User\Objects\HeilsCar.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\User\Objects\HeilsCar.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 69]: Last Updated: Thu Dec 08 10:40:09 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 69]: Last Updated: Thu Dec 08 21:52:55 2016
 <BR><P>
 <H3>Maximum Stack Usage =        336 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1803,7 +1803,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> _task.o(.data)
 </UL>
-<P><STRONG><a name="[12]"></a>ManualTask</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, _task.o(.text))
+<P><STRONG><a name="[12]"></a>ManualTask</STRONG> (Thumb, 324 bytes, Stack size 16 bytes, _task.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 156 + Unknown Stack Size
 <LI>Call Chain = ManualTask &rArr; LCD_WriteFloat &rArr; LCD_WriteInt &rArr; LCD_WriteString &rArr; LCD_WriteChar &rArr; LCD_ShowChar &rArr; LCD_DrawPoint &rArr; LCD_SetCursor
 </UL>
@@ -1816,6 +1816,7 @@ Global Symbols
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PS2_DataKey
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> _task.o(.data)
@@ -4468,6 +4469,7 @@ Global Symbols
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DistancePID
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AnglePID
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualTask
 <LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ultrafilter
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Scan
 </UL>
