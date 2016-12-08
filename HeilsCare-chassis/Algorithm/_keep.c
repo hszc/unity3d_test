@@ -60,18 +60,18 @@ void KeepPoint(void)
 		else if(Vout_A < -Speed_rotation_max) Vout_A = -Speed_rotation_max;
 		
 		speed = Vout_D;
-		SetCursor(0,0);
-		LCD_WriteString("Vout_A:");		
-		LCD_WriteFloat(Vout_A);
-		SetCursor(0,20);
-		LCD_WriteString("Vout_D:");		
-		LCD_WriteFloat(Vout_D);
-		SetCursor(0,40);
-		LCD_WriteString("GPS.radian:");		
-		LCD_WriteFloat(GPS.radian);
-		SetCursor(0,60);
-		LCD_WriteString("error_angle:");		
-		LCD_WriteFloat(error_angle);			
+// 		SetCursor(0,0);
+// 		LCD_WriteString("Vout_A:");		
+// 		LCD_WriteFloat(Vout_A);
+// 		SetCursor(0,20);
+// 		LCD_WriteString("Vout_D:");		
+// 		LCD_WriteFloat(Vout_D);
+// 		SetCursor(0,40);
+// 		LCD_WriteString("GPS.radian:");		
+// 		LCD_WriteFloat(GPS.radian);
+// 		SetCursor(0,60);
+// 		LCD_WriteString("error_angle:");		
+// 		LCD_WriteFloat(error_angle);			
 		//限最大速
 		if(speed > Speed_Keep_Max) speed = Speed_Keep_Max;
 		else if(speed < -Speed_Keep_Max) speed = -Speed_Keep_Max;

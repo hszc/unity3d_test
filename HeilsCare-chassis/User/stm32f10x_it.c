@@ -287,25 +287,12 @@ void TIM4_IRQHandler(void)
 	if(TIM_GetITStatus(TIM4,TIM_IT_Update) == SET)
 	{
 		TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
+		
 		for( ;iCount < ultrasonic_num; iCount++)
 		{
-			if(Ultrasonic[iCount].IsStart == 0x02)
+			if(Ultrasonic[iCount].IsStart == 0x01)
 			{
-				if(Ultrasonic[iCount].GPIO_IN->IDR & Ultrasonic[iCount].Pin_In)
-					Ultrasonic[iCount].trig_time++;
-				else
-				{
-					Ultrasonic[iCount].IsStart = 0;
-					//计算得到距离
-					Ultrasonic[iCount].distance = Ultrasonic[iCount].trigfactor * Ultrasonic[iCount].trig_time;
-					Ultrasonic[iCount].trig_time = 0;
-					//如果距离小于阈值，则停车
-					if(Ultrasonic[iCount].distance <= Ultrasonic[iCount].threthold)
-					{
-//						SetSpeed(0,0,0);
-						Ultrasonic[iCount].IsStop = 1;
-					}
-				}
+				Ultrasonic[iCount].trig_count++;
 			}
 		}
 	}
@@ -315,30 +302,30 @@ void TIM4_IRQHandler(void)
 void EXTI0_IRQHandler(void)
 {
 	EXTI->PR = EXTI_Line0;//PC0
-	if(Ultrasonic[0].IsStart == 0x01)
-	Ultrasonic[0].IsStart = 0x02;
+// 	if(Ultrasonic[0].IsStart == 0x01)
+// 	Ultrasonic[0].IsStart = 0x02;
 }
 
 void EXTI1_IRQHandler(void)
 {
 	EXTI->PR = EXTI_Line1;//PC1
-	if(Ultrasonic[1].IsStart == 0x01)
-	Ultrasonic[1].IsStart = 0x02;
+// 	if(Ultrasonic[1].IsStart == 0x01)
+// 	Ultrasonic[1].IsStart = 0x02;
 
 }
 
 void EXTI2_IRQHandler(void)
 {
 	EXTI->PR = EXTI_Line2;//PC2
-	if(Ultrasonic[2].IsStart == 0x01)
-	Ultrasonic[2].IsStart = 0x02;
+// 	if(Ultrasonic[2].IsStart == 0x01)
+// 	Ultrasonic[2].IsStart = 0x02;
 }
 
 void EXTI3_IRQHandler(void)
 {
 	 EXTI->PR = EXTI_Line3;////PC3
-	 if(Ultrasonic[3].IsStart == 0x01)
-	 Ultrasonic[3].IsStart = 0x02;
+// 	 if(Ultrasonic[3].IsStart == 0x01)
+// 	 Ultrasonic[3].IsStart = 0x02;
 }
 ////////////////////////////////////////////////////////////////
 void EXTI4_IRQHandler(void)//PB4

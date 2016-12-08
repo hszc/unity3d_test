@@ -103,19 +103,26 @@ void ManualTask(void *para)
     sprintf(SdTPC, "(%d,%d,%d,%d,1)\n\t", (int)GPS.position.x, (int)GPS.position.y, (int)GPS.radian, 100);
     Com_Puts(1, SdTPC);
     SdTPC[0] = 0;
-		Speed_X = (Data[5] - 0x80)* 20;
+		Speed_Rotation = (Data[5] - 0x80)* 20;
 		Speed_Y = (0x80 - Data[6])* 20;
 //		SetSpeed(100,100,100);
  		//SetSpeed(PcData.speed_x.fl32*10,PcData.speed_y.fl32*10,PcData.speed_rot.fl32*10);
-		setDiffSpeed(500,300);
+				SetCursor(0,0);
+		LCD_WriteString("Speed_Y:");		
+		LCD_WriteFloat(Speed_Y);
+		SetCursor(0,20);
+		LCD_WriteString("Speed_Rotation:");		
+		LCD_WriteFloat(Speed_Rotation);
+		
+		setDiffSpeed(Speed_Y,Speed_Rotation);
  		Ultrasonic[0].UtralMea(0);
 		Ultrasonic[0].Ultrafilter(0);
- 		Ultrasonic[1].UtralMea(1);
-		Ultrasonic[1].Ultrafilter(1);
- 		Ultrasonic[2].UtralMea(2);
-		Ultrasonic[2].Ultrafilter(2);
- 		Ultrasonic[3].UtralMea(3);
-		Ultrasonic[3].Ultrafilter(3);
+//  		Ultrasonic[1].UtralMea(1);
+// 		Ultrasonic[1].Ultrafilter(1);
+//  		Ultrasonic[2].UtralMea(2);
+// 		Ultrasonic[2].Ultrafilter(2);
+//  		Ultrasonic[3].UtralMea(3);
+// 		Ultrasonic[3].Ultrafilter(3);
 		delay_ms(10);
 	};
 }
@@ -164,8 +171,8 @@ void LcdTask(void *para)
 		
 		KeepPoint();
 		SetCursor(0,130);
-		LCD_WriteString("now_distance:");
-		LCD_WriteFloat(GetLength(GPS.position,end_point));//输出实时距离
+// 		LCD_WriteString("now_distance:");
+// 		LCD_WriteFloat(GetLength(GPS.position,end_point));//输出实时距离
 		if((GetLength(GPS.position,end_point) < 50)&&((GPS.radian-aim_angle*pi/180<0.02)&&(GPS.radian-aim_angle*pi/180>-0.02)))
 		{
 			SPEED_STOP;

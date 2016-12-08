@@ -31,13 +31,14 @@ struct Ultrasonic Ultrasonic[] =
 	{
 		.Id 										= 0x00,
 		.trig_time   						= 0,
-		
+		.cnt                    = 0,
+	  .trig_count							= 0,
 		.GPIO_IN								= GPIOC,
 		.Pin_In 								= GPIO_Pin_0,
 		.GPIO_OUT								= GPIOD,
 		.Pin_Out								= GPIO_Pin_12,
 
-		.trigfactor 						= 4.5,
+		.trigfactor 						= 0.017,//340 / 2 / 10000,
 		.distance 							=	0.0f,
 		.IsStop 								= 1,
 		.threthold 							= 200,
@@ -50,13 +51,14 @@ struct Ultrasonic Ultrasonic[] =
 	{
 		.Id 										= 0x01,
 		.trig_time   						= 0,
-		
+		.cnt                    = 0,
+	  .trig_count							= 0,
 		.GPIO_IN								= GPIOC,
 		.Pin_In 								= GPIO_Pin_1,
 		.GPIO_OUT								= GPIOD,
 		.Pin_Out								= GPIO_Pin_13,
 
-		.trigfactor 						= 4.5,
+		.trigfactor 						= 0.017,
 		.distance 							=	0.0f,
 		.IsStop 								= 1,
 		.threthold 							= 200,
@@ -69,13 +71,14 @@ struct Ultrasonic Ultrasonic[] =
 	{
 		.Id 										= 0x02,
 		.trig_time   						= 0,
-		
+		.cnt                    = 0,
+	  .trig_count							= 0,
 		.GPIO_IN								= GPIOC,
 		.Pin_In 								= GPIO_Pin_2,
 		.GPIO_OUT								= GPIOD,
 		.Pin_Out								= GPIO_Pin_14,
 
-		.trigfactor 						= 4.5,
+		.trigfactor 						= 0.017,
 		.distance 							=	0.0f,
 		.IsStop 								= 1,
 		.threthold 							= 200,
@@ -88,13 +91,14 @@ struct Ultrasonic Ultrasonic[] =
 	{
 		.Id 										= 0x03,
 		.trig_time   						= 0,
-		
+		.cnt                    = 0,
+	  .trig_count							= 0,
 		.GPIO_IN								= GPIOC,
 		.Pin_In 								= GPIO_Pin_3,
 		.GPIO_OUT								= GPIOD,
 		.Pin_Out								= GPIO_Pin_15,
 
-		.trigfactor 						= 4.5,
+		.trigfactor 						= 0.017,
 		.distance 							=	0.0f,
 		.IsStop 								= 1,
 		.threthold 							= 200,
@@ -129,9 +133,29 @@ static void ClcUtralData(unsigned char parg)
 static void UtralMea(unsigned char parg)
 {
 	Ultrasonic[parg].GPIO_OUT -> BSRR = Ultrasonic[parg].Pin_Out;
-	delay_ms(2);
+	delay_us(20);
 	Ultrasonic[parg].GPIO_OUT -> BRR = Ultrasonic[parg].Pin_Out;
-	Ultrasonic[parg].IsStart = 1;
+	
+	/*等待回响信号*/
+
+	while(GPIO_ReadInputDataBit(Ultrasonic[parg].GPIO_IN,Ultrasonic[parg].Pin_In) == RESET);
+	TIM_Cmd(TIM4,ENABLE);
+	//回响信号到来，开启定时器计数
+	Ultrasonic[parg].IsStart = 0x01;
+	while(GPIO_ReadInputDataBit(Ultrasonic[parg].GPIO_IN,Ultrasonic[parg].Pin_In) == SET);
+	//回响信号消失
+	TIM_Cmd(TIM4,DISABLE);
+	//关闭定时器
+
+	Ultrasonic[parg].cnt = TIM4->CNT;
+	//获取计TIM2数寄存器中的计数值，一边计算回响信号时间
+	Ultrasonic[parg].trig_time = Ultrasonic[parg].cnt + Ultrasonic[parg].trig_count * 399;
+	Ultrasonic[parg].distance = (float)Ultrasonic[parg].trig_time * Ultrasonic[parg].trigfactor;
+	//通过回响信号计算距离
+	TIM4->CNT = 0;  //将TIM2计数寄存器的计数值清零
+	Ultrasonic[parg].IsStart = 0x00;	
+	Ultrasonic[parg].trig_count = 0;  //中断溢出次数清零
+	delay_ms(10);
 }
 
 /************************************************************************

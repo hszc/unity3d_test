@@ -20,7 +20,7 @@ static void TIM4_Configuration(void)
 	TIM_TimeBaseInitTypeDef TIM_Instruction;
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4,ENABLE);
 	TIM_Instruction.TIM_Period=399;
-	TIM_Instruction.TIM_Prescaler=719;
+	TIM_Instruction.TIM_Prescaler=71;
 	TIM_Instruction.TIM_ClockDivision=0;
 	TIM_Instruction.TIM_CounterMode=TIM_CounterMode_Up;
 	TIM_TimeBaseInit(TIM4, &TIM_Instruction);
@@ -44,7 +44,7 @@ void TIM_Config(void)
 	TIM4_Configuration();
 	TIM4_NVIC_Configuration();
 	TIM_ITConfig(TIM4,TIM_IT_Update,ENABLE);
-	TIM_Cmd(TIM4,ENABLE);
+	TIM_Cmd(TIM4,DISABLE);
 }
 
 /******************* (C) COPYRIGHT 2016 Heils *****END OF FILE****/

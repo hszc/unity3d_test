@@ -33,6 +33,7 @@
 #include "_lcd.h"
 #include "_lcdio.h"
 void AutoTask(void *pdata);
+void QEI_Init(void);
  int main(void)
  {	
 	SysTick_init();
@@ -42,6 +43,7 @@ void AutoTask(void *pdata);
 	//Can1_Init();
   PWM_Init();
 	Usart_Init();
+	 QEI_Init();
  	IO_Init();
 	PS2_Init();
 	PID_Clear();

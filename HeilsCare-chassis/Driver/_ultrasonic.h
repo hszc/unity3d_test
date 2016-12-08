@@ -9,7 +9,9 @@ struct Ultrasonic
 {
 	unsigned char Id;
 	
-	unsigned int trig_time;
+	unsigned int trig_time; 
+	unsigned int cnt;
+	unsigned int trig_count;
 	GPIO_TypeDef * GPIO_IN;
 	uint16_t Pin_In;
 	GPIO_TypeDef * GPIO_OUT;
