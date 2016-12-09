@@ -1,0 +1,7 @@
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\bin\Debug\LeapMotionTest.exe.config
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\bin\Debug\LeapMotionTest.exe
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\bin\Debug\LeapMotionTest.pdb
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\bin\Debug\LeapCSharp.NET4.5.dll
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\obj\Debug\LeapMotionTest.csprojResolveAssemblyReference.cache
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\obj\Debug\LeapMotionTest.exe
+c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\obj\Debug\LeapMotionTest.pdb
