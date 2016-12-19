@@ -107,7 +107,6 @@ namespace HeilsCare
             }
         }
 
-
         private BaseItem CreateItem(string text, string symbol)
         {
             RadialMenuItem item = new RadialMenuItem();
