@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace HeilsCare
 {
-    class SharedDataAndMethod
+    public class SharedDataAndMethod
     {
         private InterActionHandler m_InterInterActionHandler = new InterActionHandler();
+        private LoginHandler m_loginHandler = new LoginHandler();
+        private SystemAdminHandler m_systemAdminHandler = new SystemAdminHandler();
         public void SendMessage(Message m_message)
         {
             //界面消息处理
@@ -27,6 +29,7 @@ namespace HeilsCare
             //登陆消息
             if (m_message.GetMessageType() >= MessageType.MSG_LOGIN_MIN && m_message.GetMessageType() <= MessageType.MSG_LOGIN_MAX)
             {
+                m_loginHandler.HandleMessage(m_message);
                 return;
             }
 
@@ -51,8 +54,9 @@ namespace HeilsCare
             }
 
             //系统管理消息
-            if (m_message.GetMessageType() >= MessageType.MSG_SYSTEM_ADMIN_MIN && m_message.GetMessageType() <= MessageType.MSG_SYSTEM_ADMIN_MIN)
+            if (m_message.GetMessageType() >= MessageType.MSG_SYSTEM_ADMIN_MIN && m_message.GetMessageType() <= MessageType.MSG_SYSTEM_ADMIN_MAX)
             {
+                m_systemAdminHandler.HandleMessage(m_message);
                 return;
             }
         }

@@ -19,6 +19,17 @@ namespace HeilsCare
         public const int MSG_INTERFACE_REGISTER = 0x1003;
         //更新界面UI是否可用
         public const int MSG_INTERFACE_UPDATE_UI = 0x1004;
+        //登录
+        public const int MSG_INTERFACE_LOGIN = 0x1005;
+        //退出
+        public const int MSG_INTERFACE_CLOSE_FORM = 0x1006;
+        //初始化设备
+        public const int MSG_REGISTER_ID_CARD_INITIALIZE = 0x1007;
+        //身份证读卡器处理
+        public const int MSG_REGISTER_ID_CARD_READ_PROCESS = 0x1008;
+        //问卷一
+        public const int MSG_INTERFACE_QUESTIONARE_ONE = 0x1009;
+
 
 
         /*******************************************************************
@@ -33,6 +44,12 @@ namespace HeilsCare
         ********************************************************************/
         public const int MSG_LOGIN_MIN = 0x3000;
         public const int MSG_LOGIN_MAX = 0x3fff;
+        //登录成功之后，显示用户信息
+        public const int MSG_LOGIN_SHOW_USER_INFO = 0x3001;
+        //登出
+        public const int MSG_LOGIN_OUT = 0x3002;
+        //显示用于其他图形、图线历史数据
+        public const int MSG_SHOW_HISTROTY_DATA = 0x3003;
 
         /*******************************************************************
          * 问卷消息
@@ -60,5 +77,7 @@ namespace HeilsCare
         ********************************************************************/
         public const int MSG_SYSTEM_ADMIN_MIN = 0x7000;
         public const int MSG_SYSTEM_ADMIN_MAX = 0x7fff;
+        //系统设置菜单
+        public const int MSG_SYSTEM_ADMIN_MENU = 0x7001;
     }
 }

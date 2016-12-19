@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeilsCare
 {
-    class Message
+    public class Message
     {
         public Message(int m_Id)
         {
