@@ -13,7 +13,7 @@ namespace HeilsCare
         {
             Other = 1,
             Unknown,
-            Desktop,
+            DesktopComputer,
             LowProfileDesktop,
             PizzaBox,
             MiniTower,
