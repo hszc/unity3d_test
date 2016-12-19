@@ -8,8 +8,6 @@ namespace HeilsCare
 {
     public class SharedDataAndMethod
     {
-
-
         private InterActionHandler m_InterInterActionHandler = new InterActionHandler();
         private LoginHandler m_loginHandler = new LoginHandler();
         private SystemAdminHandler m_systemAdminHandler = new SystemAdminHandler();
