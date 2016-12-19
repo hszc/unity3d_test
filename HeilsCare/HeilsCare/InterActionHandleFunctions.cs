@@ -18,7 +18,6 @@ namespace HeilsCare
 {
     partial class InterActionHandler
     {
-
         public void GetPeopleCount(Message m_message)
         {
             if (m_message.GetMessageType() != MessageType.MSG_INTERFACE_PEOPLE_COUNT)
