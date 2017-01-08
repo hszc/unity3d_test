@@ -36,7 +36,8 @@ namespace HeilsCare
             MainForm.m_pMainWnd.LoginPanel.Visible = true;
             MainForm.m_pMainWnd.LogOutPanel.Visible = false;
             MainForm.m_pMainWnd.BloodPressure.Visible = false;
-            MainForm.m_pMainWnd.WelcomLogo.Visible = true;
+            //MainForm.m_pMainWnd.WelcomLogo.Visible = true;
+            MainForm.m_pMainWnd.FlashPlayer.Visible = true;
         }
 
         private void ShowUerInfo(Message m_message)
@@ -45,19 +46,23 @@ namespace HeilsCare
             MainForm.m_pMainWnd.userInfo.Text="欢迎您:"+username;
             MainForm.m_pMainWnd.LoginPanel.Visible = false;
             MainForm.m_pMainWnd.LogOutPanel.Visible = true;
+            MainForm.m_pMainWnd.FlashPlayer.Visible = false;
         }
 
         private void ShowUserHistoryData(Message m_message)
         {
             string m_userName = m_message.GetString();
             //根据username从数据库中得到历史数据
-            MainForm.m_pMainWnd.WelcomLogo.Visible = false;
+            //MainForm.m_pMainWnd.WelcomLogo.Visible = false;
             MainForm.m_pMainWnd.BloodPressure.Visible = true;
-            MainForm.m_pMainWnd.BloodPressure.GraphPane.XAxis.ScaleFontSpec.Size = 30;//设置x轴的文字大小.
-            MainForm.m_pMainWnd.BloodPressure.GraphPane.YAxis.ScaleFontSpec.Size = 30;//设置y轴的文字大小.
+            MainForm.m_pMainWnd.BloodPressure.GraphPane.XAxis.ScaleFontSpec.Size = 20;//设置x轴的文字大小.
+            MainForm.m_pMainWnd.BloodPressure.GraphPane.YAxis.ScaleFontSpec.Size = 20;//设置y轴的文字大小.
+            MainForm.m_pMainWnd.BloodPressure.GraphPane.XAxis.TitleFontSpec.Size = 20;
+            MainForm.m_pMainWnd.BloodPressure.GraphPane.YAxis.TitleFontSpec.Size = 20;
             MainForm.m_pMainWnd.BloodPressure.GraphPane.XAxis.Title="日期";
             MainForm.m_pMainWnd.BloodPressure.GraphPane.YAxis.Title = "血压";
             MainForm.m_pMainWnd.BloodPressure.IsShowPointValues = true;
+            MainForm.m_pMainWnd.BloodPressure.GraphPane.FontSpec.Size = 20;
             MainForm.m_pMainWnd.BloodPressure.GraphPane.Title = "血压变化曲线";
 
             //MainForm.m_pMainWnd.BloodPressure.GraphPane.YAxis.major = true;//设置虚线.

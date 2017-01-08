@@ -5,3 +5,6 @@ c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTes
 c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\obj\x86\Debug\LeapMotionTest.csprojResolveAssemblyReference.cache
 c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\obj\x86\Debug\LeapMotionTest.exe
 c:\users\snow\documents\visual studio 2013\Projects\LeapMotionTest\LeapMotionTest\obj\x86\Debug\LeapMotionTest.pdb
+D:\项目\Git同步\Romote\LeapMotionTest\LeapMotionTest\bin\x86\Debug\LeapMotionTest.exe.config
+D:\项目\Git同步\Romote\LeapMotionTest\LeapMotionTest\obj\x86\Debug\LeapMotionTest.exe
+D:\项目\Git同步\Romote\LeapMotionTest\LeapMotionTest\obj\x86\Debug\LeapMotionTest.pdb

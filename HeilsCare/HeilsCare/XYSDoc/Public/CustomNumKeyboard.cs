@@ -27,7 +27,7 @@ namespace XYS.Remp.Screening.Public
         private CustomNumKeyboard(object sender)
         {
             InitializeComponent();
-            TopMost = true;
+            TopMost = false;
             BackColor = Color.FromArgb(228,243,251);
             //FormBorderStyle = FormBorderStyle.None;
 

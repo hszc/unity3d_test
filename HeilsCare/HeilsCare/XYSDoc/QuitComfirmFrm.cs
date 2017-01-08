@@ -33,7 +33,8 @@ namespace XYS.Remp.Screening
             _goToForm = goToFrm;
             _questionForm = quesFrm;
             lblTitle.Text = text;
-            btnQuit.Text = "放弃/下一位";
+            //btnQuit.Text = "放弃/下一位";
+            btnQuit.Text = "回到主界面";
             btnContinue.Text = "放弃/其他筛查";
             btnContinue.Font=new Font("宋体",10,FontStyle.Bold);
 
@@ -46,6 +47,16 @@ namespace XYS.Remp.Screening
         //结束/下一位
         private void btnQuit_Click(object sender, EventArgs e)
         {
+            //
+            if (_questionForm != null)
+            {
+                _questionForm.Close();
+            }
+            Close();
+            return;
+            //end
+
+
             //清空排尿异常一二题选择标识
             Properties.Settings.Default.QuesSelFlag = string.Empty;
             //清空问卷记录Id

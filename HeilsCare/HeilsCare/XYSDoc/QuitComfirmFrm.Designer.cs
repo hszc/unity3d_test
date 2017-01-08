@@ -81,7 +81,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(124, 45);
             this.btnQuit.TabIndex = 1;
-            this.btnQuit.Text = "结束/下一位";
+            this.btnQuit.Text = "回到主界面";
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -109,7 +109,6 @@
             this.Name = "QuitComfirmFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuitComfirmFrm";
-            this.TopMost = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.QuitComfirmFrm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.QuitComfirmFrm_Paint);

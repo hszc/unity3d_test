@@ -83,7 +83,7 @@ namespace XYS.Remp.Screening.Other.THAH
             ClientInfo.AddQuestionToQuestionnaire(question2, QuestionnaireCode.Thah);
 
             //跳转
-            ThahTwo thahTwo = new ThahTwo { TopMost = true };
+            ThahTwo thahTwo = new ThahTwo { TopMost = false };
             thahTwo.Show();
             Close();
         }

@@ -20,7 +20,7 @@ namespace XYS.Remp.Screening.Other.THAH
         //返回
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var screenOtherSelect = new ScreenOtherSelect { TopMost = true };
+            var screenOtherSelect = new ScreenOtherSelect { TopMost = false };
             screenOtherSelect.Show();
             Close();
         }
@@ -33,7 +33,7 @@ namespace XYS.Remp.Screening.Other.THAH
         //上一页
         private void btnBefore_Click(object sender, EventArgs e)
         {
-            var thahFour = new ThahFour { TopMost = true };
+            var thahFour = new ThahFour { TopMost = false };
             thahFour.Show();
             Close();
         }
@@ -113,7 +113,7 @@ namespace XYS.Remp.Screening.Other.THAH
             ClientInfo.AddQuestionToQuestionnaire(question11, QuestionnaireCode.Thah); 
 
             //跳转
-            var thahSix=new ThahSix{TopMost = true};
+            var thahSix=new ThahSix{TopMost = false};
             thahSix.Show();
             Close();
         }

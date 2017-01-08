@@ -11,6 +11,8 @@ namespace HeilsCare
         private InterActionHandler m_InterInterActionHandler = new InterActionHandler();
         private LoginHandler m_loginHandler = new LoginHandler();
         private SystemAdminHandler m_systemAdminHandler = new SystemAdminHandler();
+        private GymnasicHandler m_GymnasicHandler = new GymnasicHandler();
+
         public void SendMessage(Message m_message)
         {
             //界面消息处理
@@ -43,6 +45,7 @@ namespace HeilsCare
             //体感操消息
             if (m_message.GetMessageType() >= MessageType.MSG_GYMNASTIC_MIN && m_message.GetMessageType() <= MessageType.MSG_GYMNASTIC_MAX)
             {
+                m_GymnasicHandler.HandleMessage(m_message);
                 return;
             }
 

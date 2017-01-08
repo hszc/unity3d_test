@@ -95,7 +95,7 @@ namespace XYS.Remp.Screening.Other
 
             if (loginInfo.UserId > -2)
             {
-                var question = new QuestionOne { TopMost = true };
+                var question = new QuestionOne { TopMost = false };
                 question.Show();
                 Close();
             }
@@ -155,7 +155,7 @@ namespace XYS.Remp.Screening.Other
 
             if (loginInfo.UserId > -2)
             {
-                var copdOne = new CopdOne() { TopMost = true };
+                var copdOne = new CopdOne() { TopMost = false };
                 copdOne.Show();
                 Close();
             }
@@ -215,7 +215,7 @@ namespace XYS.Remp.Screening.Other
 
             if (loginInfo.UserId > -2)
             {
-                var thahOne = new ThahOne() { TopMost = true };
+                var thahOne = new ThahOne() { TopMost = false };
                 thahOne.Show();
                 Close();
             }

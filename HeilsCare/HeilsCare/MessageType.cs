@@ -30,8 +30,6 @@ namespace HeilsCare
         //问卷一
         public const int MSG_INTERFACE_QUESTIONARE_ONE = 0x1009;
 
-
-
         /*******************************************************************
          * 注册用户消息
          ********************************************************************/
@@ -63,7 +61,7 @@ namespace HeilsCare
         ********************************************************************/
         public const int MSG_GYMNASTIC_MIN = 0x5000;
         public const int MSG_GYMNASTIC_MAX = 0x5fff;
-
+        public const int MSG_GYMNASTIC_SHOW_FORM = 0x5001;
 
         /*******************************************************************
          * 运动控制消息

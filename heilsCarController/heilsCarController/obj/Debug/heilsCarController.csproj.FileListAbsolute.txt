@@ -8,3 +8,11 @@ c:\users\snow\documents\visual studio 2013\Projects\heilsCarController\heilsCarC
 c:\users\snow\documents\visual studio 2013\Projects\heilsCarController\heilsCarController\obj\Debug\heilsCarController.exe.licenses
 c:\users\snow\documents\visual studio 2013\Projects\heilsCarController\heilsCarController\obj\Debug\heilsCarController.exe
 c:\users\snow\documents\visual studio 2013\Projects\heilsCarController\heilsCarController\obj\Debug\heilsCarController.pdb
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\bin\Debug\heilsCarController.exe.config
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.exe
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.pdb
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.csprojResolveAssemblyReference.cache
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.Form1.resources
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.Properties.Resources.resources
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.csproj.GenerateResource.Cache
+D:\项目\Git同步\Romote\heilsCarController\heilsCarController\obj\Debug\heilsCarController.exe.licenses

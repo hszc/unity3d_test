@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace HeilsCare
 {
-    class GymnasicHandler
+    partial class GymnasicHandler
     {
         public void HandleMessage(Message m_message)
         {
             switch (m_message.GetMessageType())
             {
+                case MessageType.MSG_GYMNASTIC_SHOW_FORM:
+                    ShowForm(m_message);
+                    break;
                 default:
                     break;
             }
         }
+
     }
 }

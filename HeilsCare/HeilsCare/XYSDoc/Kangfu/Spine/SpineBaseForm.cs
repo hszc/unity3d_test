@@ -52,7 +52,7 @@ namespace XYS.Remp.Screening.Kangfu.Spine
         /// <param name="e"></param>
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var frmMain = new ScreeningSelect { TopMost = true };
+            var frmMain = new ScreeningSelect { TopMost = false };
             frmMain.Show();
             Close();
         }

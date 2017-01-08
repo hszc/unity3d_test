@@ -36,7 +36,7 @@ namespace HeilsCare
                 menuContainer.SubItems.Add(CreateItem("WIFI", ""));
                 menuContainer.SubItems.Add(CreateItem("亮度", "\uf040"));
                 menuContainer.SubItems.Add(CreateItem("电量", ""));
-                menuContainer.Diameter = 200;
+                menuContainer.Diameter = 280;
                 MainForm.m_pMainWndTemp.metroTileItemSystemAdmin.SubItems.Add(menuContainer);
             }
             else

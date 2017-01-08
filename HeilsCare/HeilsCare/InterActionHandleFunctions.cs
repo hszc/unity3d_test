@@ -60,7 +60,7 @@ namespace HeilsCare
                 return;
             }
             RegistStep1Form resStep1Form = new RegistStep1Form("", "", "");
-            //resStep1Form.TopMost = true;
+            //resStep1Form.TopMost = false;
             resStep1Form.Show();
         }
 
